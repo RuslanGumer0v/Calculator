@@ -2,14 +2,14 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 
-public class CalculatorTest {
+public class Calculator1 {
     public static void main(String[] args) throws Exception {
         System.out.println("Калькулятор готов, ведите выражение:\n введите 'exit' для выхода");
         Scanner sc = new Scanner(System.in);
         int a = 0;
         int b = 0;
         String op = "";
-        String calc = "\\d+([-+*/])\\d+";
+//        String calc = "\\d+([-+*/])\\d+";
 //        String calc = "\\d+(\\-|\\+|\\*|\\/)\\d+";       //  Pattern
         do {
             String input = sc.next();
@@ -25,17 +25,18 @@ public class CalculatorTest {
             } catch (Exception e) {
                 throw new Exception("Строка не является математической операцией");
             }
-            if (!input.matches(calc)) {
-                throw new Exception("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
-            }
-//            if (operation(a, b, op) == 123456789) {
+//            if (!input.matches(calc)) {
 //                throw new Exception("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
 //            }
-            if ((a >= 1 && a <= 10) && (b >= 1 && b <= 10))
+//            if (operation(a, b, op) == 123456789) {
+//                throw new Exception("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+//            }5
+            if ((a >= 1 && a <= 10) && (b >= 1 && b <= 10) && operator.length <= 2)
                 System.out.println("Результат = " + operation(a, b, op));
             else {
                 throw new Exception("Некорректное значение. ВВедите значение от 1 до 10");
             }
+
         } while (true);
     }
 
